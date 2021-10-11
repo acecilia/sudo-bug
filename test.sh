@@ -7,7 +7,8 @@ readonly ROOT_PASS="mypass"
 sudo echo "something0"
 
 sudo /usr/bin/dscl . -passwd /Users/root "${ROOT_PASS}"
-# sudo security set-keychain-password -o "" -p "${ROOT_PASS}" /Users/root/Library/Keychains/login.keychain
+sudo security set-keychain-password -o "" -p "${ROOT_PASS}" /Users/root/Library/Keychains/login.keychain-db
+
 echo "Updated password"
 
 echo "${ROOT_PASS}" | sudo -S -v
