@@ -11,7 +11,7 @@ sudo /usr/bin/dscl . -passwd /Users/root "${ROOT_PASS}"
 
 echo "Updated password"
 
-sudo -v
+echo "${ROOT_PASS}" | sudo -S -v
 # echo "Password cached"
 
 sudo echo "something1"
