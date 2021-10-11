@@ -4,11 +4,13 @@ set -euo pipefail
 
 readonly ROOT_PASS="mypass"
 
+sudo echo "something0"
+
 sudo /usr/bin/dscl . -passwd /Users/root "${ROOT_PASS}"
-sudo security set-keychain-password -o "" -p "${ROOT_PASS}" /Users/root/Library/Keychains/login.keychain
+# sudo security set-keychain-password -o "" -p "${ROOT_PASS}" /Users/root/Library/Keychains/login.keychain
 echo "Updated password"
 
-echo "${ROOT_PASS}" | sudo -v -S
+echo "${ROOT_PASS}" | sudo -S -v
 echo "Password cached"
 
 sudo echo "something1"
