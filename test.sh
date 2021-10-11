@@ -11,8 +11,8 @@ sudo echo "something0"
 
 # echo "Updated password"
 
-echo "${ROOT_PASS}" | sudo -S -v
-echo "Password cached"
+# echo "${ROOT_PASS}" | sudo -S -v
+# echo "Password cached"
 
 sudo echo "something1"
 /bin/bash -c "/usr/bin/sudo echo something2"
