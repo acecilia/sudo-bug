@@ -3,7 +3,9 @@
 set -euo pipefail
 
 readonly ROOT_PASS="mypass"
-usermod -p "$(openssl passwd -1 -salt 5RPVAd ${ROOT_PASS})" root
+
+sudo /usr/bin/dscl . -passwd /Users/root "${ROOT_PASS}"
+echo "Updated password"
 
 # sudo security set-keychain-password -o oldpassword -p newpassword /Users/username/Library/Keychains/login.keychain
 
