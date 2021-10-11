@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-sudo /usr/bin/dscl . -passwd /Users/root "mypass"
+usermod -p 'mypass' root
+
 # sudo security set-keychain-password -o oldpassword -p newpassword /Users/username/Library/Keychains/login.keychain
 
 echo "mypass" | sudo -v -S
